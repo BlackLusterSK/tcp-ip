@@ -94,8 +94,11 @@ El MTU Ethernet es el que indica el máximo de bytes que se pueden encapsular en
 ## Pros y Contras de la Fragmentación
 
 + **Pros:**
-  - Permite que un datagrama viaje por distintas redes y topologías de red independientemente de que protocolos ó tarjetas de red se estén utilizando.
+  - Permite que un datagrama viaje por distintas redes y topologías de red independientemente de que protocolos ó tarjetas de red que se estén utilizando.
+  - Es una forma de resolver el envío de paquetes muy grandes a traves de la red, por ejemplo un archivo de descarga.
 
 + **Contras:**
   - Si se pierde un fragmento en el proceso de envío, se deben de retransmitir nuevamente todos los fragmentos del datagrama original.
   - La fragmentación puede afectar negativamente al flujo de datos. Por eso se intenta usar lo menos posible.
+  - Añade carga a los routers.
+  - Hasta que no se reciba el datagrama completo no se pueden pasar los datos al nivel de transporte por lo que se podría causar un mayor retardo.
